@@ -14,7 +14,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -237,7 +237,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             channel.setLightColor(Color.GREEN);
             notificationManager.createNotificationChannel(channel);
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                    .setSmallIcon(R.mipmap.n_icon)
+                    // .setSmallIcon(R.mipmap.n_icon)
                     .setContentTitle(title)
                     .setContentText(messageBody)
                     .setAutoCancel(true)
@@ -254,9 +254,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 }
                 if (actionData.get("banner") != null) {
                     Bitmap bitmap = getBitmapfromUrl(actionData.get("banner").toString());
-                    notificationBuilder.setStyle(new NotificationCompat.BigPictureStyle()
-                            .bigPicture(bitmap)
-                            .bigLargeIcon(null));
+                    // notificationBuilder.setStyle(new NotificationCompat.BigPictureStyle()
+                            // .bigPicture(bitmap)
+                            // .bigLargeIcon(null));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -267,7 +267,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         } else {
 
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                    .setSmallIcon(R.mipmap.n_icon)
+                    // .setSmallIcon(R.mipmap.n_icon)
                     .setContentTitle(title)
                     .setContentText(messageBody)
                     .setAutoCancel(true)
@@ -283,9 +283,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 }
                 if (actionData.get("banner") != null) {
                     Bitmap bitmap = getBitmapfromUrl(actionData.get("banner").toString());
-                    notificationBuilder.setStyle(new NotificationCompat.BigPictureStyle()
-                            .bigPicture(bitmap)
-                            .bigLargeIcon(null));
+                    // notificationBuilder.setStyle(new NotificationCompat.BigPictureStyle()
+                            // .bigPicture(bitmap)
+                            // .bigLargeIcon(null));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
