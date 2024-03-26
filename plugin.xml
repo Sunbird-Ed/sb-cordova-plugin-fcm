@@ -37,7 +37,7 @@
 		<preference name="FCM_CORE_VERSION" default="16.0.9" />
 		<preference name="FCM_VERSION" default="18.0.0" />
 		<preference name="GRADLE_TOOLS_VERSION" default="3.5.0" />
-		<preference name="GOOGLE_SERVICES_VERSION" default="4.2.0" />
+		<preference name="GOOGLE_SERVICES_VERSION" default="4.3.8" />
 		<preference name="ANDROID_DEFAULT_NOTIFICATION_ICON" default="@mipmap/ic_launcher" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
@@ -62,9 +62,6 @@
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
-
-		<framework src="com.google.firebase:firebase-core:$FCM_CORE_VERSION" />
-		<framework src="com.google.firebase:firebase-messaging:$FCM_VERSION" />
 
 		<framework src="src/android/FCMPlugin.gradle" custom="true" type="gradleReference"/>
 
@@ -102,7 +99,7 @@
 		<!-- FIREBASE COCOA PODS-->
 		<podspec>
             <config>
-                <source url="https://github.com/CocoaPods/Specs.git"/>
+                <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods>
 				<pod name="Firebase/Analytics" spec="~> 6.3.0" />
