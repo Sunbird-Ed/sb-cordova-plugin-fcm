@@ -22,7 +22,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.sunbirded.app.sandbox.R;
+import org.sunbird.app.R;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
