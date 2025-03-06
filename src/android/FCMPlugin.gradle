@@ -11,7 +11,6 @@ buildscript {
     }
     repositories {
         mavenCentral()
-        jcenter()
         mavenLocal()
         if (gradleNumberVersion >= 3.4f) {
             google()
@@ -39,7 +38,6 @@ buildscript {
 }
 repositories {
     mavenCentral()
-    jcenter()
     if (gradleNumberVersion >= 3.4f) {
         google()
     }
